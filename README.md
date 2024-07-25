@@ -5,60 +5,60 @@ BSA Summer 2024 Homework 8 (DB SQL) Binary Studio Academy HW 7 - JS: DB &amp; SQ
 erDiagram
     FILES {
         INT id PK
-        VARCHAR(100) file_name
-        VARCHAR(50) mime_type
-        VARCHAR(255) key
+        VARCHAR file_name
+        VARCHAR mime_type
+        VARCHAR key
         TEXT url
-        TIMESTAMP created_at
-        TIMESTAMP updated_at
+        DATETIME created_at
+        DATETIME updated_at
     }
 
     COUNTRY {
         INT id PK
-        VARCHAR(50) name
+        VARCHAR name
     }
 
     GENRE {
         INT id PK
-        VARCHAR(50) name
+        VARCHAR name
     }
 
     PERSON {
         INT id PK
-        VARCHAR(50) first_name
-        VARCHAR(50) last_name
+        VARCHAR first_name
+        VARCHAR last_name
         TEXT biography
         DATE date_of_birth
         gender_type gender
         INT country_id FK
         INT primary_photo_id FK
-        TIMESTAMP created_at
-        TIMESTAMP updated_at
+        DATETIME created_at
+        DATETIME updated_at
     }
 
     MOVIE {
         INT id PK
-        VARCHAR(100) title
+        VARCHAR title
         TEXT description
-        DECIMAL(20, 2) budget
+        FLOAT budget
         DATE release_date
         INT duration
         INT director_id FK
         INT country_id FK
         INT poster_id FK
-        TIMESTAMP created_at
-        TIMESTAMP updated_at
+        DATETIME created_at
+        DATETIME updated_at
     }
 
     CHARACTER {
         INT id PK
-        VARCHAR(50) name
+        VARCHAR name
         TEXT description
         role_type role
         INT movie_id FK
         INT actor_id FK
-        TIMESTAMP created_at
-        TIMESTAMP updated_at
+        DATETIME created_at
+        DATETIME updated_at
     }
 
     MOVIE_GENRE {
@@ -69,14 +69,14 @@ erDiagram
 
     USERS {
         INT id PK
-        VARCHAR(50) username UNIQUE
-        VARCHAR(50) first_name
-        VARCHAR(50) last_name
-        VARCHAR(50) email UNIQUE
-        VARCHAR(20) password
+        VARCHAR username UNIQUE
+        VARCHAR first_name
+        VARCHAR last_name
+        VARCHAR email UNIQUE
+        VARCHAR password
         INT avatar_id FK
-        TIMESTAMP created_at
-        TIMESTAMP updated_at
+        DATETIME created_at
+        DATETIME updated_at
     }
 
     FAVORITE_MOVIES {

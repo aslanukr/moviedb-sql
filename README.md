@@ -29,7 +29,7 @@ erDiagram
         VARCHAR last_name
         TEXT biography
         DATE date_of_birth
-        gender_type gender
+        ENUM gender_type gender
         INT country_id FK
         INT primary_photo_id FK
         DATETIME created_at
@@ -54,7 +54,7 @@ erDiagram
         INT id PK
         VARCHAR name
         TEXT description
-        role_type role
+        ENUM role_type role
         INT movie_id FK
         INT actor_id FK
         DATETIME created_at
@@ -62,8 +62,8 @@ erDiagram
     }
 
     MOVIE_GENRE {
-        INT movie_id FK
-        INT genre_id FK
+        INT movie_id
+        INT genre_id
         PK(movie_id, genre_id)
     }
 
@@ -80,8 +80,8 @@ erDiagram
     }
 
     FAVORITE_MOVIES {
-        INT user_id FK
-        INT movie_id FK
+        INT user_id
+        INT movie_id
         PK(user_id, movie_id)
     }
 

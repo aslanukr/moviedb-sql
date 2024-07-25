@@ -1,6 +1,7 @@
 # Movie DB SQL Setup
 BSA Summer 2024 Homework 8 (DB SQL) Binary Studio Academy HW 7 - JS: DB &amp; SQL
 
+
 ```mermaid
 erDiagram
     FILES {
@@ -62,9 +63,8 @@ erDiagram
     }
 
     MOVIE_GENRE {
-        INT movie_id
-        INT genre_id
-        PK(movie_id, genre_id)
+        INT movie_id PK
+        INT genre_id PK
     }
 
     USERS {
@@ -80,9 +80,8 @@ erDiagram
     }
 
     FAVORITE_MOVIES {
-        INT user_id
-        INT movie_id
-        PK(user_id, movie_id)
+        INT user_id PK
+        INT movie_id PK
     }
 
     COUNTRY ||--o{ PERSON : "has many"

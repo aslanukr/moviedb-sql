@@ -29,7 +29,7 @@ erDiagram
         VARCHAR last_name
         TEXT biography
         DATE date_of_birth
-        ENUM gender_type gender
+        gender_type gender
         INT country_id FK
         INT primary_photo_id FK
         DATETIME created_at
@@ -40,7 +40,7 @@ erDiagram
         INT id PK
         VARCHAR title
         TEXT description
-        FLOAT budget
+        DECIMAL budget
         DATE release_date
         INT duration
         INT director_id FK
@@ -54,7 +54,7 @@ erDiagram
         INT id PK
         VARCHAR name
         TEXT description
-        ENUM role_type role
+        role_type role
         INT movie_id FK
         INT actor_id FK
         DATETIME created_at

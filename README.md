@@ -1,5 +1,4 @@
 # Movie DB SQL Setup
-BSA Summer 2024 Homework 8 (DB SQL) Binary Studio Academy HW 8 - JS: DB &amp; SQL
 
 
 ```mermaid
